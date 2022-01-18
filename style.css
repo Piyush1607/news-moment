@@ -1,0 +1,258 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700|Roboto:300,400,500,700,900&amp;display=swap");
+
+:root{
+    font-size: 16px;
+    --bg-primary:#1c1c1e;
+    --bg-secondary:#141418;
+    --nav-margin:16rem;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body{
+    background-color: #ffffff;
+}
+
+body::-webkit-scrollbar{
+    width: 0.5rem;
+}
+
+body::-webkit-scrollbar-track{
+    background  :#1e1e24;
+}
+
+body::-webkit-scrollbar-thumb{
+    background :rgb(28, 118, 214);
+}
+
+/* ------------------NAVBAR ------------------------*/
+
+
+nav ul{
+    transition: all 0.2s linear;
+}
+.navbar {
+    top: 0;
+    position: fixed;
+    width: 100%;
+    background-color: white ;
+    display: flex;
+    height: 65px;
+    justify-content: space-between;
+    background: rgb(220, 40, 40);
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+.navbar h3{
+    font-size: 25px;
+    margin: 20px;
+
+}
+.nav-links{
+    list-style: none;
+    display: flex;
+}
+
+.nav-item{
+    margin: 20px;
+}
+.navbar span {
+    position: fixed;
+    right: 0;
+    display: none;
+}
+.nav-item a{
+    text-decoration: none;
+}
+
+.login{
+    background-color: white;
+    color: black;
+    padding: 10px 20px;
+    font-weight: 600;
+    border-radius: 20px;
+}
+
+.sign-up{
+    color:white ;
+    padding: 10px 20px;
+    font-weight: 600;
+    border: 2px solid white;
+    border-radius: 20px;
+}
+.help{
+    color :white;
+    font-weight: 600;
+}
+
+
+/* ------------------------------------ */
+/* ----------MAIN-CONTENT-------------- */
+/* ------------------------------------ */
+
+.content{
+    margin-top: 50px;
+    display: flex;
+}
+
+.sidelist{
+    margin: 1% 0 0 0;
+    width: 15.33%;
+    height: 100%;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+.categories{
+    height: 100vh;
+    width: 15.33%;
+    position: fixed;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    /* background: rgb(28, 118, 214); */
+}
+
+.categories li{
+    text-align: center;
+    padding: 10px;
+    transition: all 200ms ease-in-out;
+}
+
+.categories li a{
+    color: red;
+    font-weight: 500;
+    font-size: large;
+    padding: auto;
+    text-decoration: none;
+}
+
+.categories li a:hover,
+.categories li a:active{
+    color: black;
+}
+
+.maincontent{
+    width: 83.06%;
+    float: left;
+    margin: 1% 0 1% 1.6%;
+    height: 100%;
+}
+.news-content{
+    display: flex;
+    flex-wrap: wrap;
+}
+.news-item{
+    width: 90%;
+    margin-left: 5%;
+    height: 20%;
+    margin-bottom: 10px;
+}
+.new-desc{
+    margin: 20px;
+    font-size: 15px;
+}
+.news-img{
+    margin: 5%;
+    /* height: 10rem; */
+    width: 95%;
+    padding: 5px;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    border-radius: 10px;
+}
+
+
+.news{
+    width: 30%;
+    border: 0.1px solid  rgb(209, 209, 209);
+    margin: 10px;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    padding: 15px;
+    border-radius: 10px;
+    background-color: #fafafa84;
+}
+
+.news-title{
+    text-align: left;
+    margin-left: 5.5%;
+    font-size: 15x;
+}
+
+.news-url{
+    color: rgb(28, 118, 214);
+    text-decoration: none;
+}
+.news-url:hover{
+    color:red;
+}
+@media screen and (max-width: 950px){
+    
+    .news{
+        width: 45%;
+        height: 10%;
+    }
+    .maincontent{
+        flex-direction: row;
+        margin-left: 15%;
+    }
+    .navbar{
+        transition: all 0.3s linear;
+        z-index: 100;
+    }
+    .navbar span {
+        margin: 20px;
+        display: initial;
+    }
+    
+    .navbar span a{
+        font-size: 25px;
+        font-weight: bolder;
+        color: white;
+        text-decoration: none;
+    }
+    .nav-links{
+        display: none;
+    }
+    .open{
+        margin-top: 0;
+        position: fixed;
+        top:60px;
+        z-index: 100;
+        left: 0;
+        height: 100vh;
+        background: rgb(220, 40, 40);
+        display: block;
+        width: 100%;
+        text-align: center;
+    }
+
+    .nav-links li{
+        margin: 40px 0;
+    }
+
+}
+@media screen and (max-width: 800px){
+    
+   
+    .sidelist li a{
+        font-size: 16px;
+    }
+
+    .sidelist ul{
+        align-self: center;
+    }
+    .maincontent{
+        flex-direction: row;
+        margin-left: 15%;
+    }
+    .news{
+        width: 80%;
+        height: 10%;
+    }
+    
+}
